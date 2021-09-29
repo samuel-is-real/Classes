@@ -1,0 +1,55 @@
+public class Primates {
+  // Attributes
+  String name;
+  String favFood;
+  String species;
+  String size;
+  String colour;
+  char sex;
+  int age;
+  double weight;
+  boolean tired = false;
+
+  // General Constructor
+public Primates(String name, String favFood, String species, String size, String colour, char sex, int age, double weight) {
+  this.name = name;
+  this.favFood = favFood;
+  this.species = species;
+  this.size = size;
+  this.colour = colour;
+  this.sex = sex;
+  this.age = age;
+  this.weight = weight;
+}
+  // Simple communicate 
+  public void communicate() {
+    System.out.println(this.name + " screams oo oo aa aa and hears a response in the distance.\n");
+  }
+  // Sleeping for less than 6 hours will make the primate tired.
+  public void sleep(int hoursSlept) {
+    System.out.println(this.name + " has slept for " + hoursSlept + " hours.");
+
+    if (hoursSlept < 6) {
+    System.out.println("However, " + this.name + " is still tired. \n");
+    tired = true;
+    }
+    else {
+      System.out.println(this.name + " wakes up feeling refreshed.\n");
+    tired = false;
+    }
+  }
+  
+  // If object height is too tall the climbing fails, or if climb height is negative.
+  public void climb(String object, double objHeight) {
+    System.out.println(this.name + " decides to try climbing on top of a " + object + ".");
+    if (objHeight == 2) {
+      System.out.print("However, this object is too tall for " + this.name + " to climb!\n");
+    }
+    else if (objHeight < 0) {
+      System.out.println("However, this object is too low for " + this.name + " to climb!\n");
+    }
+    else {
+      System.out.println(this.name + " has successfully climbed on top of the " + object + ".\n");
+    }
+  }
+}
